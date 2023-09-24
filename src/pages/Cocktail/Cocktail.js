@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { myContext } from '../../Context';
-import { Link } from 'react-router-dom';
 import CockItem from '../../component/Item/CockItem';
+import './Cocktail.scss'
 
 function Cocktail() {
 	const { data, fetchFn } = useContext(myContext);
@@ -38,25 +38,30 @@ function Cocktail() {
 		setCocktail(data); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
 	}, [data]);
 	const alpa = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-	const cate = ['Ordinary Drink', 'Cocktail', 'Shake','Other \/ Unknown','Cocoa','Shot','Coffee \/ Tea','Homemade Liqueur','Punch \/ Party Drink','Beer','Soft Drink']
+	const cate = ['Ordinary Drink', 'Cocktail', 'Shake', 'Other \/ Unknown', 'Cocoa', 'Shot', 'Coffee \/ Tea', 'Homemade Liqueur', 'Punch \/ Party Drink', 'Beer', 'Soft Drink']
 
 	return (
 		<>
-			<h1>Drinks</h1>
-			<div className='cock_menu'>
-				{/* {cate.map((v, k) => (
+			<section>
+				<h2>Cocktail List</h2>
+				<div className='inner'>
+					<h1>Drinks</h1>
+					<div className='cock_menu'>
+						{/* {cate.map((v, k) => (
 					<button key={k} onClick={handleButtonClick}>{v}</button>
 				))} */}
-			</div>
-			<ul>
-				{cocktail.length >= 0 ? (
-					cocktail.map((item) => (
-						<CockItem item={item} />
-					))
-				) : (
-					<li>데이터가 없습니다.</li>
-				)}
-			</ul>
+					</div>
+					<ul className='cocktail_wrap'>
+						{cocktail.length >= 0 ? (
+							cocktail.map((item) => (
+								<CockItem item={item} />
+							))
+						) : (
+							<li>데이터가 없습니다.</li>
+						)}
+					</ul>
+				</div>
+			</section>
 		</>
 	)
 }

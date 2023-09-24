@@ -1,9 +1,10 @@
-import React, {useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // import { myContext } from '../../Context'
 import axios from 'axios';
 import './Home.scss'
 import Mainslide from '../../component/Mainslide/Mainslide';
 import { Link } from 'react-router-dom';
+import visual from '../../img/main/MAIN_visual_bg.jpg'
 
 function Home() {
 	// const { data, fetchFn } = useContext(myContext);
@@ -82,25 +83,33 @@ function Home() {
 	return (
 		<>
 			<section className='main_sec1'>
+				<h2>main_section1</h2>
 				<div className='inner'>
+					<h2>Popular Ingredients</h2>
 					<h3 className='lang_kr'>오늘의<br />추천칵테일</h3>
 					{/* sec1 데이터 출력 */}
 					{sec1.map((item) => (
 						<span key={item.idDrink} className='random'>{item.strDrink}</span>
 					))}
 				</div>
+				{/* <div className='bg'></div> */}
+				{/* <img src={visual} className='bg' /> */}
 			</section>
 			<Mainslide />
 			<section className='main_sec3'>
+				<h2>main_section3</h2>
 				<div className='inner'>
-					{popIngredi.map((ingredient, index) => (
-						<div key={index}>
-							<Link to={`/ingredient/${ingredient}`}>
-								<img src={`https://www.thecocktaildb.com/images/ingredients/${ingredient}-Medium.png`} alt={ingredient} />
-								{ingredient}
-							</Link>
-						</div>
-					))}
+					<h2>Popular Ingredients</h2>
+					<div className='sec3_wrap'>
+						{popIngredi.map((ingredient, index) => (
+							<div key={index} className='main3_item'>
+								<Link to={`/ingredient/${ingredient}`}>
+									<img src={`https://www.thecocktaildb.com/images/ingredients/${ingredient}-Medium.png`} alt={ingredient} />
+									<p>{ingredient}</p>
+								</Link>
+							</div>
+						))}
+					</div>
 				</div>
 			</section>
 		</>

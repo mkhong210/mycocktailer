@@ -1,14 +1,15 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import './Mainslide.scss'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay} from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Link } from 'react-router-dom';
 
 function Mainslide() {
 	const popDrink = ["Mojito", "Old Fashioned", "Long Island Tea", "Whiskey Sour", "Dry Martini", "Margarita"];
@@ -72,36 +73,39 @@ function Mainslide() {
 	return (
 		<>
 			<section className='main_sec2'>
+				<h2>main_section2</h2>
 				<div className='inner'>
-
-					<Swiper
-						slidesPerView={1.4}
-						spaceBetween={30}
-						loop={true}
-						// grabCursor={true}
-						autoplay={{
-							delay: 2000,
-							disableOnInteraction: false,
-						}}
-						modules={[Autoplay]}
-						className="mySwiper"
-					>
-						{sec2.map((item, index) => (
-							<SwiperSlide key={index}>
-								<Link to={`/cocktail/${item.strDrink}/${item.idDrink}`}>
-									<div>
-										{/* 각 항목의 이름 */}
-										{item.strDrink}
-										{/* popDrink 배열을 사용하여 작업 */}
-										{/* {popDrink.map((drink, index) => (
+					<h2>Popular Drinks</h2>
+					<div className='sec2_wrap'>
+						<Swiper
+							slidesPerView={2.4}
+							spaceBetween={30}
+							loop={true}
+							// grabCursor={true}
+							autoplay={{
+								delay: 2000,
+								disableOnInteraction: false,
+							}}
+							modules={[Autoplay]}
+							className="mySwiper"
+						>
+							{sec2.map((item, index) => (
+								<SwiperSlide key={index} className='main2_item'>
+									<Link to={`/cocktail/${item.strDrink}/${item.idDrink}`}>
+										<div>
+											{/* 각 항목의 이름 */}
+											<img src={item.strDrinkThumb} />
+											<p>{item.strDrink}</p>
+											{/* popDrink 배열을 사용하여 작업 */}
+											{/* {popDrink.map((drink, index) => (
 										<div key={index}>{drink}</div>
 									))} */}
-										<img src={item.strDrinkThumb} />
-									</div>
-								</Link>
-							</SwiperSlide>
-						))}
-					</Swiper>
+										</div>
+									</Link>
+								</SwiperSlide>
+							))}
+						</Swiper>
+					</div>
 				</div>
 			</section>
 		</>

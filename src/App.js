@@ -19,7 +19,7 @@ function App() {
 					<Header />
 					<main>
 						<Routes>
-							<Route path='/' element={<Home />} />
+							<Route path='/myown-cocktail' element={<Home />} />
 							<Route path='/ingredient' element={<Ingredi />} />
 							<Route path='/ingredient/:ingredient' element={<IngreDetail />} />
 							<Route path='/cocktail' element={<Cocktail />} />

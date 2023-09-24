@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { myContext } from '../../Context';
 import IngredItem from '../../component/Item/IngredItem';
+import './Ingredi.scss'
 
 function Ingredi() {
 	const { data, fetchFn } = useContext(myContext);
@@ -39,14 +40,19 @@ function Ingredi() {
 	}, [data]);
 
 	return (
-		<div>
-			<h1>Available Ingredients</h1>
-			<ul>
-				{ingredients.map((item, index) => (
-					<IngredItem item={item} index={index} />
-				))}
-			</ul>
-		</div>
+		<>
+			<section>
+				<h2>Ingredients List</h2>
+				<div className='inner'>
+					<h1>INGREDIENTS</h1>
+					<ul className='ingredi_wrap'>
+						{ingredients.map((item, index) => (
+							<IngredItem item={item} index={index} />
+						))}
+					</ul>
+				</div>
+			</section>
+		</>
 	);
 }
 

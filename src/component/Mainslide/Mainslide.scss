@@ -1,0 +1,36 @@
+.main_sec2 {
+  
+	h2 {
+		font-size: 24px;
+		text-align: center;
+		margin: 40px auto;
+		font-weight: bold;
+	}
+  .inner {
+
+    a{
+      border-radius: 14px;
+      background-color: #fff;
+      display: inline-block;
+      flex: 1;
+    }
+  }
+  .sec2_wrap {
+    margin: 20px 0;
+  }
+  .main2_item {
+    display: flex;
+    flex-direction: column;
+    img {
+      border-radius: 14px 14px 0 0;
+      width: 100%;
+    }
+    p {
+      color: #333;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+  }
+}

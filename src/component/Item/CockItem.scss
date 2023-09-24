@@ -1,0 +1,16 @@
+.cocktail_item{
+  width: calc((100% - 30px) / 2);
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    text-align: center;  
+  }
+  img {
+    width: 80%;
+    padding: 10px;
+  }
+} 

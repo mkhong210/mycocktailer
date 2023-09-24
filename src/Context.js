@@ -1,12 +1,20 @@
 import axios from 'axios';
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useEffect, useReducer } from 'react'
 
 const myContext = createContext();
 
+const insert = (state, action) => {
+	switch (action.type) {
+		case "get": return state;
+		case "cock_a": return state;
+		case "more" : return [...state, ...action.d]
+		default: return action.d;
+	}
+}
 
 
 function Context({ children }) {
-	const [data, setData] = useState([]);
+	const [data, dispatch] = useReducer(insert,[]);
 
 	let cockdb = axios.create({
 		baseURL: 'https://www.thecocktaildb.com/api/json/v1/1'
@@ -46,7 +54,7 @@ function Context({ children }) {
 				viewData = res.data.drinks;
 		}
 		// fetchFn({ type, d: viewData });
-		setData(viewData);
+		dispatch({d:viewData});
 		// console.log(viewData);
 		// if (viewData) {
     //     setData(viewData);

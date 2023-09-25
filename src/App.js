@@ -14,12 +14,12 @@ import Back from './component/Item/Back';
 function App() {
 	return (
 		<Context>
-			<BrowserRouter>
+			<BrowserRouter basename='/myown-cocktail'>
 				<div className='myown_cocktail'>
 					<Header />
 					<main>
 						<Routes>
-							<Route path='/myown-cocktail' element={<Home />} />
+							<Route path='/' element={<Home />} />
 							<Route path='/ingredient' element={<Ingredi />} />
 							<Route path='/ingredient/:ingredient' element={<IngreDetail />} />
 							<Route path='/cocktail' element={<Cocktail />} />

@@ -9,7 +9,7 @@ function Header() {
 	return (
 		<header className='header_wrap'>
 			<div className='inner_h'>
-				<Link to='/myown-cocktail' className='logo'>
+				<Link to='/' className='logo'>
 					<img src={logo} />
 				</Link>
 				<div className='search_wrap'> 

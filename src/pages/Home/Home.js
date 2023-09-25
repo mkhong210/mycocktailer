@@ -41,8 +41,6 @@ function Home() {
 	// 		}
 	// 	}
 
-
-
 	// 	const [mainSrc1, mainSrc3] = await Promise.all([
 	// 		cockdb.get(`random.php`),
 	// 		// cockdb.get(`/search.php?s=${popDrink[0]}`),
@@ -85,7 +83,7 @@ function Home() {
 			<section className='main_sec1'>
 				<h2>main_section1</h2>
 				<div className='inner'>
-					<h2>Popular Ingredients</h2>
+					{/* <h2>Popular Ingredients</h2> */}
 					<h3 className='lang_kr'>오늘의<br />추천칵테일</h3>
 					{/* sec1 데이터 출력 */}
 					{sec1.map((item) => (

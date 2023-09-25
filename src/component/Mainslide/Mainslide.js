@@ -70,6 +70,7 @@ function Mainslide() {
 	useEffect(() => {
 		mainShow(); // 컴포넌트가 마운트될 때 mainShow 호출
 	}, [])
+	console.log(sec2.strDrinkThumb)
 	return (
 		<>
 			<section className='main_sec2'>
@@ -90,6 +91,7 @@ function Mainslide() {
 							className="mySwiper"
 						>
 							{sec2.map((item, index) => (
+
 								<SwiperSlide key={index} className='main2_item'>
 									<Link to={`/cocktail/${item.strDrink}/${item.idDrink}`}>
 										<div>

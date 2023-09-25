@@ -24,7 +24,7 @@ function BottomNavi() {
 					</Link>
 				</div>
 				<div className='navi_item'>
-					<Link to='/myown-cocktail'>
+					<Link to='/'>
 						<img src={home} />
 						<p>홈</p>
 					</Link>

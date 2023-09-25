@@ -9,18 +9,25 @@ function CockDetail() {
 	const { data, fetchFn } = useContext(myContext);
 	const [cockdetail, setCockdetail] = useState([]);
 
+	const fetchData = async () => {
+		await fetchFn('cock_detail', id);
+		// setCockdetail(...data);
+	};
+	// useEffect(() => {
+	// 	const fetchData = async () => {
+	// 		await fetchFn('cock_detail', id)
+	// 		// try {
+	// 		// } catch (error) {
+	// 		// 	console.error('API 호출 중 오류 발생:', error);
+	// 		// }
+	// 	};
+
+	// 	fetchData(); // fetchData 함수를 호출합니다.
+	// }, [fetchFn]);
+
 	useEffect(() => {
-		const fetchData = async () => {
-			await fetchFn('cock_detail', id)
-			// try {
-			// } catch (error) {
-			// 	console.error('API 호출 중 오류 발생:', error);
-			// }
-		};
-
-		fetchData(); // fetchData 함수를 호출합니다.
-	}, [fetchFn]);
-
+		fetchData(); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
+	}, []);
 	useEffect(() => {
 		setCockdetail(...data); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
 	}, [data]);

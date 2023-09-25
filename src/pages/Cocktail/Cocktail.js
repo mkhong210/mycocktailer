@@ -21,7 +21,7 @@ function Cocktail() {
 	}
 	const fetchData = async (cate) => {
 		await fetchFn('cock_a', cate);
-		console.log(data);
+		// console.log(data);
 	};
 
 	// useEffect(() => {
@@ -39,15 +39,16 @@ function Cocktail() {
 	// }, [fetchFn, clickedButton]);
 	
 	useEffect(() => {
-		fetchData("Cocktail");
+		fetchData("a");
+		// fetchData("Cocktail");
 	}, []);
 
 	useEffect(() => {
 		setCocktail(data); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
 	}, [data]);
 	const alpa = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-	const cate = ['Ordinary Drink', 'Cocktail', 'Shake', 'Other \/ Unknown', 'Cocoa', 'Shot', 'Coffee \/ Tea', 'Homemade Liqueur', 'Punch \/ Party Drink', 'Beer', 'Soft Drink']
-
+	// const cate = ['Ordinary Drink', 'Cocktail', 'Shake', 'Other \/ Unknown', 'Cocoa', 'Shot', 'Coffee \/ Tea', 'Homemade Liqueur', 'Punch \/ Party Drink', 'Beer', 'Soft Drink']
+	console.log(data)
 	return (
 		<>
 			<section>
@@ -55,14 +56,14 @@ function Cocktail() {
 				<div className='inner'>
 					<h1>Drinks</h1>
 					<div className='cock_menu'>
-						{cate.map((v, k) => (
+						{alpa.map((v, k) => (
 							<button key={k} onClick={handleButtonClick}>{v}</button>
 						))}
 					</div>
 					<ul className='cocktail_wrap'>
-						{cocktail.length >= 0 ? (
-							cocktail.map((item) => (
-								<CockItem item={item} />
+						{cocktail !== null ? (
+							cocktail.map((item, index) => (
+								<CockItem key={index} item={item} />
 							))
 						) : (
 							<li>데이터가 없습니다.</li>

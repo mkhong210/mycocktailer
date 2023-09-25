@@ -9,7 +9,7 @@ import user from '../../img/common/Common_user.png'
 
 function BottomNavi() {
 	return (
-		<footer>
+		<footer className='footer_wrap'>
 			<div className='inner_b'>
 				<div className='navi_item'>
 					<Link to='/ingredient'>

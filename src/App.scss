@@ -3,13 +3,21 @@
 .lang_kr {
   font-family: "Noto Sans KR", sans-serif;
 }
+
 .inner {
   max-width: 768px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 40px 0;
+  }
 }
-section > h2 {
+
+section>h2 {
   display: none;
 }
 
@@ -22,17 +30,60 @@ section > h2 {
   // height: 100%;
   // border: solid 2px #000;
   position: relative;
+  margin: 0 auto;
+
   main {
-    margin: 60px 0 65px 0;
+    margin-top: 60px;
     background-color: #32154F;
     max-height: 1000px;
     overflow-y: auto;
+    position: relative;
+
     * {
       color: #fff;
-    } 
-  } 
-}
-img {
-  width: 200px;
+    }
+
+    >section {
+      // margin-bottom: 65px;
+    }
+  }
+
+  main .back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    // width: 40px;
+    // height: 40px;
+    cursor: pointer;
+    >button {
+      background: none;
+      border: none;
+      padding: 0;
+      width: 34px;
+      height: 34px;
+      box-sizing: border-box;
+      img {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: white;
+        padding: 8px;
+      }
+    }
+  }
 }
 
+img {
+  // width: 200px;
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .inner {
+    padding: 0 10px;
+    h1 {
+      font-size: 28px;
+      margin: 20px 0;
+    }
+  }
+}

@@ -1,13 +1,25 @@
-.inner {
-  h1 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    margin: 40px 0;
-  }
-}
+
 .ingredi_wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.img_wrap {
+  margin: 20px auto;
+  text-align: center;
+  img {
+    width: 60%;
+  }
+}
+
+.desc {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+
+  .desc {
+    font-size: 14px;
+  }
 }

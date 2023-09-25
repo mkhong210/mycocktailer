@@ -47,7 +47,7 @@ function Ingredi() {
 					<h1>INGREDIENTS</h1>
 					<ul className='ingredi_wrap'>
 						{ingredients.map((item, index) => (
-							<IngredItem item={item} index={index} />
+							<IngredItem key={index} item={item} />
 						))}
 					</ul>
 				</div>

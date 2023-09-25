@@ -11,11 +11,13 @@
 header {
 	background-color: #fff;
 	height: 60px;
+	max-width: 768px;
 	width: 100%;
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: 50%;
 	z-index: 10;
+	transform: translate(-50%);
 }
 
 .header_wrap {

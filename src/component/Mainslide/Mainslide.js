@@ -87,22 +87,22 @@ function Mainslide() {
 								delay: 2000,
 								disableOnInteraction: false,
 							}}
-							modules={[Autoplay]}
+							// modules={[Autoplay]}
 							className="mySwiper"
 						>
 							{sec2.map((item, index) => (
-
 								<SwiperSlide key={index} className='main2_item'>
 									<Link to={`/cocktail/${item.strDrink}/${item.idDrink}`}>
-										<div>
+										<div className='item_inner'>
 											{/* 각 항목의 이름 */}
-											<img src={item.strDrinkThumb} />
-											<p>{item.strDrink}</p>
+											{/* <img src={item.strDrinkThumb} /> */}
+											<div className="drink_img" style={{ backgroundImage: `url(${item.strDrinkThumb})` }}></div>
 											{/* popDrink 배열을 사용하여 작업 */}
 											{/* {popDrink.map((drink, index) => (
-										<div key={index}>{drink}</div>
-									))} */}
+												<div key={index}>{drink}</div>
+											))} */}
 										</div>
+										<p>{item.strDrink}</p>
 									</Link>
 								</SwiperSlide>
 							))}

@@ -4,8 +4,8 @@ import Back from '../../component/Item/Back';
 import { myContext } from '../../Context';
 
 function CockDetail() {
-	const { name, id } = useParams();
-	console.log(name, id);
+	const {  id } = useParams();
+	console.log( id);
 	const { data, fetchFn } = useContext(myContext);
 	const [cockdetail, setCockdetail] = useState([]);
 
@@ -36,8 +36,9 @@ function CockDetail() {
 	return (
 		<>
 			<Back />
-			<div>
-				<h2>{cockdetail.strDrink}</h2>
+			<section>
+				<h2>Cocktail Detail</h2>
+				<h1>{cockdetail.strDrink}</h1>
 				<img src={cockdetail.strDrinkThumb} alt={cockdetail.strDrink} />
 				<p>Category: {cockdetail.strCategory}</p>
 				<p>Glass: {cockdetail.strGlass}</p>
@@ -67,7 +68,7 @@ function CockDetail() {
 						Image Source: <a href={cockdetail.strImageSource}>Link</a>
 					</p>
 				)}
-			</div>
+			</section>
 		</>
 	)
 }

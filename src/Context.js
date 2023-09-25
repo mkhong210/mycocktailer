@@ -40,7 +40,8 @@ function Context({ children }) {
 				break;
 
 			case "cock_a":
-				res = await cockdb.get(`/filter.php?c=${ingredi}`);
+				// res = await cockdb.get(`/filter.php?c=${ingredi}`);
+				res = await cockdb.get(`/search.php?f=${ingredi}`);
 				viewData = res.data.drinks;
 				break;
 

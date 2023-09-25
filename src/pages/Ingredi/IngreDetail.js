@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CockItem from '../../component/Item/CockItem';
 import Back from '../../component/Item/Back';
+import './Ingredi.scss'
 // import { myContext } from '../../Context';
 
 function IngreDetail() {
@@ -117,22 +118,25 @@ function IngreDetail() {
 	}, [])
 
 	return (
-		<div>
+		<>
 			{/* {ingredient && ( */}
-			<div>
+			<section className='inner'>
+				<h2>Ingredient Detail</h2>
 				<Back />
-				<h1>Cocktail List with {ingredient}</h1>
-				<img src={`http://www.thecocktaildb.com/images/ingredients/${ingredient}.png`} />
+				{/* <h1>Cocktail List with {ingredient}</h1> */}
+				<div className='img_wrap'>
+					<img src={`http://www.thecocktaildb.com/images/ingredients/${ingredient}.png`} />
+				</div>
 				<h1>{sec1.strIngredient}</h1>
 				{/* fonts	14px */}
-				<p>{sec1.strDescription}</p>
+				<p className='desc'>{sec1.strDescription}</p>
 				<ul>
-					{sec2.map(cocktail => (
-						<CockItem item={cocktail} />
+					{sec2.map((cocktail, index) => (
+						<CockItem key={index} item={cocktail} />
 					))}
 				</ul>
-			</div>
-		</div>
+			</section>
+		</>
 	);
 }
 

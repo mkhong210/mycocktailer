@@ -11,7 +11,7 @@ function IngredItem({ item}) {
 					{/* <img src={`https://www.thecocktaildb.com/images/ingredients/${item.strIngredient1}.png`} alt={`${item.strIngredient1} img`} /> */}
 					<div className='item_inner'>
 						{/* <img src={item.strDrinkThumb} alt={item.strDrink} /> */}
-						<div className="ingredi_img" style={{ backgroundImage: `url(https://www.thecocktaildb.com/images/ingredients/${item.strIngredient1}.png)` }}></div>
+						{/* <div className="ingredi_img" style={{ backgroundImage: `url(https://www.thecocktaildb.com/images/ingredients/${item.strIngredient1}.png)` }}></div> */}
 						<div className='ingredi_img'>
 							<img src={`https://www.thecocktaildb.com/images/ingredients/${item.strIngredient1}.png`} alt={item.strDrink} />
 						</div>

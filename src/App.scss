@@ -33,7 +33,7 @@ section>h2 {
   margin: 0 auto;
 
   main {
-    margin: 60px 0 65px 0;
+    padding: 60px 0 65px 0;
     background-color: #32154F;
     // max-height: 1000px;
     max-height: 100vh;
@@ -44,14 +44,15 @@ section>h2 {
       color: #fff;
     }
 
-    >section {
+    .inner > ul {
       // margin-bottom: 65px;
+      margin: 20px 0 30px;
     }
   }
 
   main .back {
     position: absolute;
-    top: 10px;
+    top: 70px;
     left: 10px;
     // width: 40px;
     // height: 40px;

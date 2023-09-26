@@ -1,12 +1,26 @@
 // import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { myContext } from '../../Context';
 import IngredItem from '../../component/Item/IngredItem';
 import './Ingredi.scss'
+import search from '../../img/common/Common_search.png'
 
 function Ingredi() {
 	const { data, fetchFn } = useContext(myContext);
 	const [ingredients, setIngredients] = useState([]);
+	const searchBtn = useRef();
+	const handleSearch = async () => {
+		// const searchTerm = searchBtn.current.value;
+		// // console.log(searchTerm);
+
+		// const newData = await fetchFn('search', searchTerm);
+
+		//   // 데이터를 가져왔으면 state를 업데이트합니다.
+		//   setLocalData(newData);
+		console.log(searchBtn.current.value)
+		fetchFn("search_i", searchBtn.current.value)
+		
+	};
 
 	// useEffect(() => {
 	// 	// const fetchData = async () => {
@@ -37,18 +51,29 @@ function Ingredi() {
 
 	useEffect(() => {
 		setIngredients(data); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
-	}, [data]);
+	}, [data]);	
+	console.log(data)
 
 	return (
 		<>
-			<section>
+			<section className='ingredi_list'>
 				<h2>Ingredients List</h2>
 				<div className='inner'>
 					<h1>INGREDIENTS</h1>
+					<div className='search_wrap'>
+						<input type='text' ref={searchBtn} name='search' className='search'></input>
+						<button className='search_btn' onClick={handleSearch}>
+							<img src={search} />
+						</button>
+					</div>
 					<ul className='ingredi_wrap'>
-						{ingredients.map((item, index) => (
-							<IngredItem key={index} item={item} />
-						))}
+						{ingredients.length > 0 ? (
+							ingredients.map((item, index) => (
+								<IngredItem key={index} item={item} />
+							))
+						) : (
+							<li>데이터가 없습니다.</li>
+						)}
 					</ul>
 				</div>
 			</section>

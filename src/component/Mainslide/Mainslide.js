@@ -12,49 +12,12 @@ import 'swiper/css/pagination';
 
 
 function Mainslide() {
+	const [sec2, setSec2] = useState([]);
 	const popDrink = ["Mojito", "Old Fashioned", "Long Island Tea", "Whiskey Sour", "Dry Martini", "Margarita"];
 
 	let cockdb = axios.create({
 		baseURL: 'https://www.thecocktaildb.com/api/json/v1/1'
 	})
-
-	const [sec2, setSec2] = useState([]);
-
-	// const mainShow = async () => {
-	// 	const searchPromises = popDrink.map(drink => cockdb.get(`/search.php?s=${drink}`));
-	// 	console.log(...searchPromises)
-	// 	// const searchResults = await Promise.all(searchPromises);
-
-	// 	// const sec2Data = searchResults.map(result => result.data.drinks).flat();
-	// 	// setSec2(sec2Data);
-
-	// 	// const selectedResult = searchResults.find(result => result.data.drinks.length > 0);
-
-	// 	// if (selectedResult) {
-	// 	// 	setSec2(selectedResult.data.drinks);
-	// 	// }
-
-	// 	for (let i = 0; i < popDrink.length; i++) {
-	// 		const response = await cockdb.get(`/search.php?s=${popDrink[i]}`);
-	// 		const selectedDrink = response.data.drinks[0];
-	// 		if (selectedDrink) {
-	// 			setSec2(prevState => [...prevState, selectedDrink]);
-	// 		}
-	// 	}
-
-
-	// 	const [mainSrc1, mainSrc3] = await Promise.all([
-	// 		cockdb.get(`random.php`),
-	// 		// cockdb.get(`/search.php?s=${popDrink[0]}`),
-	// 		// ...searchPromises,
-	// 		cockdb.get(`/search.php?s=${popDrink[0]}`)
-	// 	]);
-	// 	setSec1(mainSrc1.data.drinks);
-	// 	// setSec2(mainSrc2.data.drinks);
-	// 	// setSec2(mainSrc2.map(result => result.data.drinks).flat());
-	// 	setSec3(mainSrc3.data.drinks);
-	// 	// console.log(mainSrc2.data.drinks)
-	// }
 
 	const mainShow = async () => {
 		try {
@@ -79,15 +42,23 @@ function Mainslide() {
 					<h2>Popular Drinks</h2>
 					<div className='sec2_wrap'>
 						<Swiper
-							slidesPerView={2.4}
-							spaceBetween={30}
+							breakpoints={{
+								0: {
+									slidesPerView:1.6,
+									spaceBetween:10
+								},
+								480: {
+									slidesPerView:2.4,
+									spaceBetween:20
+								}
+							}}
 							loop={true}
 							// grabCursor={true}
 							autoplay={{
 								delay: 2000,
 								disableOnInteraction: false,
 							}}
-							// modules={[Autoplay]}
+							modules={[Autoplay]}
 							className="mySwiper"
 						>
 							{sec2.map((item, index) => (

@@ -130,7 +130,7 @@ function IngreDetail() {
 				<h1>{sec1.strIngredient}</h1>
 				{/* fonts	14px */}
 				<p className='desc'>{sec1.strDescription}</p>
-				<ul>
+				<ul className='cock_InIngredi'>
 					{sec2.map((cocktail, index) => (
 						<CockItem key={index} item={cocktail} />
 					))}

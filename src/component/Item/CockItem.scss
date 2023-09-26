@@ -21,7 +21,7 @@
 	// }
 	.item_inner {
 		position: relative;
-		width: 70%;
+		width: 90%;
 
 		&::after {
 			content: '';
@@ -46,5 +46,15 @@
 		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 480px) {
+  .cocktail_item {
+		width: calc((100% - 20px) / 2);
+		.item_inner {
+			position: relative;
+			width: 100%;
+		}
 	}
 }

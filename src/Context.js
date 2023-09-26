@@ -14,7 +14,7 @@ const insert = (state, action) => {
 
 
 function Context({ children }) {
-	const [data, dispatch] = useReducer(insert,[]);
+	const [data, dispatch] = useReducer(insert, []);
 
 	let cockdb = axios.create({
 		baseURL: 'https://www.thecocktaildb.com/api/json/v1/1'
@@ -50,17 +50,27 @@ function Context({ children }) {
 				viewData = res.data.drinks;
 				break;
 
+			case "search_d":
+				res = await cockdb.get(`/search.php?s=${ingredi}`);
+				viewData = res.data.drinks;
+				break;
+
+			case "search_i":
+				res = await cockdb.get(`/search.php?i=${ingredi}`);
+				viewData = res.data.drinks;
+				break;
+
 			default:
 				res = await cockdb.get(`/list.php?i=list`);
 				viewData = res.data.drinks;
 		}
 		// fetchFn({ type, d: viewData });
-		dispatch({d:viewData});
+		dispatch({ d: viewData });
 		// console.log(viewData);
 		// if (viewData) {
-    //     setData(viewData);
-    //     console.log(viewData);
-    // }
+		//     setData(viewData);
+		//     console.log(viewData);
+		// }
 	}
 
 	useEffect(() => {

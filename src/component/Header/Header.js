@@ -24,7 +24,7 @@ function Header() {
 
 		// window.location.href = '/myown-cocktail/cocktail';
 		// <Link to='/cocktail' />;
-		navigate('/cocktail');
+		// navigate('/cocktail');
 	};
 
 	// console.log(data)
@@ -36,12 +36,12 @@ function Header() {
 				<Link to='/' className='logo'>
 					<img src={logo} />
 				</Link>
-				<div className='search_wrap'>
+				{/* <div className='search_wrap'>
 					<input type='text' ref={searchBtn} name='search' className='search'></input>
 					<button className='search_btn' onClick={handleSearch}>
 						<img src={search} />
 					</button>
-				</div>
+				</div> */}
 			</div>
 		</header>
 	)

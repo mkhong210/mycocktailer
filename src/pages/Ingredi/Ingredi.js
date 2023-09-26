@@ -8,17 +8,19 @@ import search from '../../img/common/Common_search.png'
 function Ingredi() {
 	const { data, fetchFn } = useContext(myContext);
 	const [ingredients, setIngredients] = useState([]);
-	const searchBtn = useRef();
+
+	const inputTxt = useRef();
+
 	const handleSearch = async () => {
-		// const searchTerm = searchBtn.current.value;
+		const searchTerm = inputTxt.current.value;
 		// // console.log(searchTerm);
 
 		// const newData = await fetchFn('search', searchTerm);
 
 		//   // 데이터를 가져왔으면 state를 업데이트합니다.
 		//   setLocalData(newData);
-		console.log(searchBtn.current.value)
-		fetchFn("search_i", searchBtn.current.value)
+		console.log(searchTerm)
+		// fetchFn("search_i", searchTerm)
 		
 	};
 
@@ -37,16 +39,17 @@ function Ingredi() {
 	// 	setIngredients(data);
 	// }, []);
 
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				await fetchFn('get'); // fetchFn을 호출하고 완료될 때까지 기다립니다.
-			} catch (error) {
-				console.error('API 호출 중 오류 발생:', error);
-			}
-		};
+	const fetchData = async (cate) => {
+		await fetchFn("get", cate); // fetchFn을 호출하고 완료될 때까지 기다립니다.
+		// try {
+		// } catch (error) {
+		// 	console.error('API 호출 중 오류 발생:', error);
+		// }
+	};
 
-		fetchData(); // fetchData 함수를 호출합니다.
+	useEffect(() => {
+
+		fetchData('list'); // fetchData 함수를 호출합니다.
 	}, [fetchFn]);
 
 	useEffect(() => {
@@ -61,8 +64,8 @@ function Ingredi() {
 				<div className='inner'>
 					<h1>INGREDIENTS</h1>
 					<div className='search_wrap'>
-						<input type='text' ref={searchBtn} name='search' className='search'></input>
-						<button className='search_btn' onClick={handleSearch}>
+						<input type='text' ref={inputTxt} name='search' className='search'></input>
+						<button className='search_btn' onClick={console.log(inputTxt)}>
 							<img src={search} />
 						</button>
 					</div>

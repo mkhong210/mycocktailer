@@ -30,7 +30,7 @@ function Context({ children }) {
 			// 	break;
 
 			case "get":
-				res = await cockdb.get(`/list.php?i=list`);
+				res = await cockdb.get(`/list.php?i=${ingredi}`);
 				viewData = res.data.drinks;
 				break;
 

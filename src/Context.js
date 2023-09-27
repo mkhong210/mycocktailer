@@ -7,11 +7,11 @@ const insert = (state, action) => {
 	switch (action.type) {
 		case "get": return state;
 		case "cock_a": return state;
+		case "search_i": return action.d;
 		case "more" : return [...state, ...action.d]
 		default: return action.d;
 	}
 }
-
 
 function Context({ children }) {
 	const [data, dispatch] = useReducer(insert, []);
@@ -21,7 +21,9 @@ function Context({ children }) {
 	})
 
 	const fetchFn = async (type, ingredi) => {
+		try {
 		let res, viewData;
+
 
 		switch (type) {
 			// case "search":
@@ -57,7 +59,7 @@ function Context({ children }) {
 
 			case "search_i":
 				res = await cockdb.get(`/search.php?i=${ingredi}`);
-				viewData = res.data.drinks;
+				viewData = res.data.ingredients;
 				break;
 
 			default:
@@ -65,12 +67,11 @@ function Context({ children }) {
 				viewData = res.data.drinks;
 		}
 		// fetchFn({ type, d: viewData });
-		dispatch({ d: viewData });
-		// console.log(viewData);
-		// if (viewData) {
-		//     setData(viewData);
-		//     console.log(viewData);
-		// }
+		dispatch({  d: viewData });
+		console.log(type, res.data.drinks)
+	} catch (error) {
+		console.error('API 호출 중 오류 발생:', error);
+}
 	}
 
 	useEffect(() => {

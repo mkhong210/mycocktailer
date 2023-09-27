@@ -8,7 +8,7 @@ import Cocktail from './pages/Cocktail/Cocktail';
 import Home from './pages/Home/Home';
 import Mypage from './pages/Mypage/Mypage';
 import { Context } from './Context';
-// import CockDetail from './pages/Cocktail/CockDetail';
+import CockDetail from './pages/Cocktail/CockDetail';
 import Back from './component/Item/Back';
 import Community from './pages/Community/Community';
 
@@ -24,8 +24,8 @@ function App() {
 							<Route path='/ingredient' element={<Ingredi />} />
 							<Route path='/ingredient/:ingredient' element={<IngreDetail />} />
 							<Route path='/cocktail' element={<Cocktail />} />
-							<Route path='/cocktail/:cocktail/:id' element={<Community />} />
-							<Route path='/community' element={<Cocktail />} />
+							<Route path='/cocktail/:cocktail/:id' element={<CockDetail />} />
+							<Route path='/community' element={<Community />} />
 							<Route path='/mypage' element={<Mypage />} />
 							<Route exact path="/" component={Back} />
 						</Routes>

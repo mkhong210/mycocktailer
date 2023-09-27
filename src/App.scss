@@ -11,7 +11,7 @@
   margin: 0 auto;
   h1 {
     text-align: center;
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: bold;
     margin: 40px 0;
   }
@@ -36,7 +36,8 @@ section>h2 {
     padding: 60px 0 65px 0;
     background-color: #32154F;
     // max-height: 1000px;
-    max-height: 100vh;
+    // max-height: 100vh;
+    height: 100vh;
     overflow-y: auto;
     position: relative;
 
@@ -81,10 +82,13 @@ img {
 }
 
 @media screen and (max-width: 480px) {
+  body, html {
+    font-size: 8px !important;
+  }
   .inner {
     padding: 0 10px;
     h1 {
-      font-size: 28px;
+      // font-size: 28px;
       margin: 20px 0;
     }
   }

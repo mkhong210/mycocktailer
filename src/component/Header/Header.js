@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from 'react'
 import './Header.scss'
-import { Link, useNavigate  } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import { Link, withRouter } from 'react-router-dom'
 import logo from '../../img/common/Cocktail_logo.png'
 import search from '../../img/common/Common_search.png'
@@ -9,7 +9,7 @@ import { myContext } from '../../Context';
 function Header() {
 	const searchBtn = useRef();
 	// console.log(searchBtn);
-	const {data, fetchFn} = useContext(myContext);
+	const { data, fetchFn } = useContext(myContext);
 	const navigate = useNavigate();
 	const [localData, setLocalData] = useState(null); // 변수 이름을 변경
 
@@ -19,16 +19,12 @@ function Header() {
 
 		const newData = await fetchFn('search', searchTerm);
 
-      // 데이터를 가져왔으면 state를 업데이트합니다.
-      setLocalData(newData);
+		setLocalData(newData);
 
-		// window.location.href = '/myown-cocktail/cocktail';
-		// <Link to='/cocktail' />;
 		// navigate('/cocktail');
 	};
 
 	// console.log(data)
-
 
 	return (
 		<header className='header_wrap'>

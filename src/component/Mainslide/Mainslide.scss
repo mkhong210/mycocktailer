@@ -1,6 +1,6 @@
 .main_sec2 {
 	h2 {
-		font-size: 24px;
+		font-size: 2.4rem;
 		text-align: center;
 		margin: 40px auto;
 		font-weight: bold;
@@ -43,7 +43,7 @@
 			height: 100%;
 			object-fit: cover;
 			object-position: center;
-			background-image: url(../../common/Loading_Spin-1s-200px.svg);
+			background-image: url(../../img/common/icon_arrow_left_333.svg);
 			background-size: 100%;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -59,7 +59,7 @@
 			font-weight: bold;
 			text-align: center;
 			padding: 10px 0;
-			font-size: 14px;
+			font-size: 1.4rem;
 		}
 	}
 }

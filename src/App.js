@@ -15,8 +15,8 @@ import Community from './pages/Community/Community';
 function App() {
 	return (
 		<Context>
-			<BrowserRouter basename='/myown-cocktail'>
-				<div className='myown_cocktail'>
+			<BrowserRouter basename='/mycocktailer'>
+				<div className='mycocktailer'>
 					<Header />
 					<main>
 						<Routes>

@@ -1,6 +1,6 @@
 {
 	"short_name": "MyCocktailer",
-	"name": "My Cocktailer",
+	"name": "MyCocktailer",
 	"icons": [
 		{
 			"src": "favicon.ico",
@@ -8,12 +8,12 @@
 			"type": "image/x-icon"
 		},
 		{
-			"src": "/myown-cocktail/icons/apple-touch-icon-72x72.png",
+			"src": "/mycocktailer/icons/apple-touch-icon-72x72.png",
 			"type": "image/png",
 			"sizes": "72x72"
 		},
 		{
-			"src": "/myown-cocktail/icons/apple-touch-icon-152x152.png",
+			"src": "/mycocktailer/icons/apple-touch-icon-152x152.png",
 			"type": "image/png",
 			"sizes": "152x152",
 			"purpose":"any"

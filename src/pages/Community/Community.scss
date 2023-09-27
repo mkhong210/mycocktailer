@@ -25,11 +25,46 @@
 				border-radius: 0 20px 20px 0;
 			}
 			&:first-child {
-				width: 90%;
+				width: 85%;
 			}
 			&:last-child {
-				width: 10%;
+				width: 15%;
 			}
+		}
+	}
+}
+
+.commu_wrap {
+	width: 100%;
+	.commu_item {
+		width: 95%;
+		margin: 10px auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		background-color: #ffffff70;
+		border-radius: 10px;
+		padding: 10px;
+		.num {
+			width: 10px;
+			font-size: 2rem;
+			width: 5%;
+			text-align: center;
+		}
+		.text {
+			width: 80%;
+			font-size: 1.8rem;
+			line-height: 1.7;
+		}
+		.delBtn {
+			width: 10%;
+			padding-top: 6px;
+			// height: 40px;
+			// height: 30px;
+			// flex: 1;
+			background-color: transparent;
+			border: none;
+			font-size: 1.4rem;
 		}
 	}
 }

@@ -18,9 +18,10 @@ function ListItem({ data, setData }) {
 		<>
 			{
 				data.map(obj => (
-					<li key={obj.id}>
-						{obj.msg}
-						<button onClick={() => { remove(obj.id) }}>삭제</button>
+					<li key={obj.id} className='commu_item lang_kr'>
+						<p className='num'>{obj.id}</p>
+						<p className='text'>{obj.msg}</p>
+						<button className='delBtn' onClick={() => {remove(obj.id)}}>삭제</button>
 					</li>
 				))
 			}

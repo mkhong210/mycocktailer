@@ -37,10 +37,6 @@ function Community() {
 		getData();
 	}, [data])
 
-
-	// index.js에서 post 한뒤 여기도 
-	// axios.post('http://localhost:3030/insert', {id:100, name: "신규데이터"})
-
 	return (
 		<>
 			<section className='commu_list'>
@@ -48,7 +44,7 @@ function Community() {
 				<div className='inner'>
 					<h1>Community</h1>
 					<Write />
-					<ul>
+					<ul className='commu_wrap'>
 						{/* data를 list에 보내준다 */}
 						<ListItem data={data} setData={setData} />
 					</ul>

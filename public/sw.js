@@ -2,9 +2,9 @@
 const staticCacheName = "version-1"
 
 const urlsToCache = [
-	"/myown-cocktail/index.html",
-	'/myown-cocktail/static/js/bundle.js',
-	'/myown-cocktail/manifest.json'
+	"/mycocktailer/index.html",
+	'/mycocktailer/static/js/bundle.js',
+	'/mycocktailer/manifest.json'
 ]
 
 // 추가된 캐시 

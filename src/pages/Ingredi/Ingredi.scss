@@ -29,30 +29,37 @@
 
 .ingredi_list .search_wrap {
 	border-bottom: solid 2px #62289C;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 50%;
+	width: 80%;
 	margin: 0 auto;
 	background-color: #fff;
-
+	border-radius: 20px;
 	.search {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.search_box{
 		font-size: 1.6rem;
 		// max-width: 180px;
 		width: 100%;
 		color: #333;
-		padding-left: 8px;
+    padding-left: 14px;
+    background-color: transparent;
 	}
-
 	.search_btn {
 		background-color: transparent;
 		border: none;
-		padding: 2px 8px;
+		padding: 4px 8px 2px;
 
 		img {
 			width: 24px;
 		}
 	}
+}
+
+// detail 
+.cock_InIngredi{
+	margin: 30px 0 10px;
 }
 
 @media screen and (max-width: 480px) {

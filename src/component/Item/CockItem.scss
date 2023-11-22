@@ -48,7 +48,11 @@
 		background-repeat: no-repeat;
 	}
 }
-
+.cock_InIngredi{
+	.cocktail_item{
+		width: 100%;
+	}
+}
 @media screen and (max-width: 480px) {
   .cocktail_item {
 		width: calc((100% - 20px) / 2);

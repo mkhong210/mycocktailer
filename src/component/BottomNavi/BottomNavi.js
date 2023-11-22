@@ -12,6 +12,12 @@ function BottomNavi() {
 		<footer className='footer_wrap'>
 			<div className='inner_b'>
 				<div className='navi_item'>
+					<Link to='/'>
+						<img src={home} />
+						<p>홈</p>
+					</Link>
+				</div>
+				<div className='navi_item'>
 					<Link to='/ingredient'>
 						<img src={ingredi} />
 						<p>재료</p>
@@ -24,23 +30,17 @@ function BottomNavi() {
 					</Link>
 				</div>
 				<div className='navi_item'>
-					<Link to='/'>
-						<img src={home} />
-						<p>홈</p>
-					</Link>
-				</div>
-				<div className='navi_item'>
 					<Link to='/community'>
 						<img src={community} />
 						<p>커뮤니티</p>
 					</Link>
 				</div>
-				<div className='navi_item'>
+				{/* <div className='navi_item'>
 					<Link to='/mypage'>
 						<img src={user} />
 						<p>마이페이지</p>
 					</Link>
-				</div>
+				</div> */}
 			</div>
 		</footer>
 	)

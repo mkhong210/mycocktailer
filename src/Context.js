@@ -68,7 +68,7 @@ function Context({ children }) {
 		}
 		// fetchFn({ type, d: viewData });
 		dispatch({  d: viewData });
-		console.log(type, res.data.drinks)
+		// console.log(type, res.data.drinks)
 	} catch (error) {
 		console.error('API 호출 중 오류 발생:', error);
 }

@@ -57,10 +57,12 @@ function Cocktail() {
 				<div className='inner'>
 					<h1>Drinks</h1>
 					<div className='search_wrap'>
-						<input type='text' ref={inputTxt} name='search' className='search'></input>
-						<button className='search_btn' onClick={(e) => { handleSearch(e) }}>
-							<img src={search} />
+						<form className='search'>
+							<input type='text' ref={inputTxt} name='search' className='search_box' placeholder='칵테일 이름을 입력하세요'></input>
+							<button className='search_btn' onClick={(e) => { handleSearch(e) }}>
+								<img src={search} />
 						</button>
+						</form>
 					</div>
 					<div className='cock_menu'>
 						{alpa.map((v, k) => (

@@ -27,21 +27,21 @@ function Ingredi() {
 
 	const fetchData = async (cate) => {
 		try {
-			await fetchFn("get", cate); // fetchFn을 호출하고 완료될 때까지 기다립니다.
+			await fetchFn("get", cate);
 		} catch (error) {
 			console.error('API 호출 중 오류 발생:', error);
 		}
 	};
 
 	useEffect(() => {
-		fetchData('list'); // fetchData 함수를 호출합니다.
+		fetchData('list');
 	}, []);
 
 	useEffect(() => {
-		setIngredients(data); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
+		setIngredients(data);
 	}, [data]);
 
-	console.log(data)
+	// console.log(data)
 
 	return (
 		<>
@@ -50,13 +50,15 @@ function Ingredi() {
 				<div className='inner'>
 					<h1>INGREDIENTS</h1>
 					<div className='search_wrap'>
-						<input type='text' ref={inputTxt} name='search' className='search'></input>
-						<button className='search_btn' onClick={(e) => { handleSearch(e) }}>
-							<img src={search} />
-						</button>
+						<form className='search'>
+							<input type='text' ref={inputTxt} name='search' className='search_box' placeholder='재료 이름을 입력하세요' />
+							<button className='search_btn' onClick={(e) => { handleSearch(e) }}>
+								<img src={search} />
+							</button>
+						</form>
 					</div>
 					<ul className='ingredi_wrap'>
-						{ingredients && ingredients.length > 0 ? (
+						{ingredients ? (
 							ingredients.map((item, index) => (
 								<IngredItem key={index} item={item} />
 							))

@@ -33,7 +33,7 @@ function Mainslide() {
 	useEffect(() => {
 		mainShow(); // 컴포넌트가 마운트될 때 mainShow 호출
 	}, [])
-	console.log(sec2.strDrinkThumb)
+	// console.log(sec2.strDrinkThumb)
 	return (
 		<>
 			<section className='main_sec2'>

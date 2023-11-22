@@ -48,6 +48,7 @@ body {
 // scroll bar
 main::-webkit-scrollbar {
   width: 10px;
+  display: none;
 }
 main::-webkit-scrollbar-track {
   border-radius: 0;

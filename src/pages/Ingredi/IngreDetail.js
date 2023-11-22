@@ -6,6 +6,12 @@ import Back from '../../component/Item/Back';
 import './Ingredi.scss'
 // import { myContext } from '../../Context';
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 function IngreDetail() {
 	// const { data, fetchFn } = useContext(myContext);
 	// const [cocktails, setCocktails] = useState([]);
@@ -131,9 +137,30 @@ function IngreDetail() {
 				{/* fonts	14px */}
 				<p className='desc'>{sec1.strDescription}</p>
 				<ul className='cock_InIngredi'>
-					{sec2.map((cocktail, index) => (
-						<CockItem key={index} item={cocktail} />
-					))}
+					<Swiper
+						slidesPerView={2.4}
+						spaceBetween={20}
+						pagination={{
+							clickable: true,
+						}}
+						breakpoints={{
+							0: {
+								slidesPerView: 2.4,
+								spaceBetween: 20,
+							},
+							480: {
+								slidesPerView: 3.4,
+								// spaceBetween: 20,
+							}
+						}}
+						className="mySwiper"
+						>
+						{sec2.map((cocktail, index) => (
+							<SwiperSlide>
+								<CockItem key={index} item={cocktail} />
+							</SwiperSlide>
+						))}
+					</Swiper>
 				</ul>
 			</section>
 		</>

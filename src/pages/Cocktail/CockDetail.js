@@ -36,10 +36,12 @@ function CockDetail() {
 	return (
 		<>
 			<Back />
-			<section>
+			<section className='cocktail_detail inner'>
 				<h2>Cocktail Detail</h2>
+				<div className='img_wrap'>
+					<img src={cockdetail.strDrinkThumb} alt={cockdetail.strDrink} className='cocktail_img'/>
+				</div>
 				<h1>{cockdetail.strDrink}</h1>
-				<img src={cockdetail.strDrinkThumb} alt={cockdetail.strDrink} />
 				<p>Category: {cockdetail.strCategory}</p>
 				<p>Glass: {cockdetail.strGlass}</p>
 				<p>Instructions: {cockdetail.strInstructions}</p>

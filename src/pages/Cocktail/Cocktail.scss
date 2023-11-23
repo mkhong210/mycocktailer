@@ -52,6 +52,18 @@
 	}
 }
 
+.cocktail_detail{
+  .img_wrap{
+    // width: 100%;
+    margin: 0 auto;
+  }
+  .cocktail_img{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .cocktail_wrap {
     display: flex;

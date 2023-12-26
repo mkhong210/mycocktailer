@@ -2,7 +2,7 @@
 
 칵테일 API를 사용하여 칵테일 레시피 및 음료 정보를 제공하고 랜덤으로 추천 칵테일을 받을 수 있는 앱
 
-<img href='./public/common/mycocktailer_thumb.jpg' alt='mycocktailer 표지'/>
+<img src='./public/common/mycocktailer_thumb.jpg' alt='mycocktailer 표지'/>
 
 ## 배포 주소 
 > [MyCocktailer 보러가기](https://mkhong210.github.io/mycocktailer/)

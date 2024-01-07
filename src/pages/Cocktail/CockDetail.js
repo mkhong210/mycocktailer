@@ -42,18 +42,20 @@ function CockDetail() {
 					<img src={cockdetail.strDrinkThumb} alt={cockdetail.strDrink} className='cocktail_img'/>
 				</div>
 				<h1>{cockdetail.strDrink}</h1>
-				<p>Category: {cockdetail.strCategory}</p>
-				<p>Glass: {cockdetail.strGlass}</p>
-				<p>Instructions: {cockdetail.strInstructions}</p>
+				<div className='detail_desc'>
+					<p>Category : {cockdetail.strCategory}</p>
+					<p>Glass : {cockdetail.strGlass}</p>
+					<p>Instructions : {cockdetail.strInstructions}</p>
+				</div>
 
-				<h3>Ingredients:</h3>
-				<ul>
+				<h3>Ingredients</h3>
+				<ul className='ingred_desc'>
 					{Array.from(Array(15).keys()).map(i => {
 						const ingredient = cockdetail[`strIngredient${i + 1}`];
 						const measure = cockdetail[`strMeasure${i + 1}`];
 						if (ingredient && measure) {
 							return (
-								<li key={i}>
+								<li key={i} className='ingred_item'>
 									<Link to={`/ingredient/${ingredient}`}>
 									<img src={`http://www.thecocktaildb.com/images/ingredients/${ingredient}-Small.png`} />
 									<p>{measure} {ingredient}</p>

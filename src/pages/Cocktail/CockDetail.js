@@ -43,9 +43,9 @@ function CockDetail() {
 				</div>
 				<h1>{cockdetail.strDrink}</h1>
 				<div className='detail_desc'>
-					<p>Category : {cockdetail.strCategory}</p>
-					<p>Glass : {cockdetail.strGlass}</p>
-					<p>Instructions : {cockdetail.strInstructions}</p>
+					<p><span>Category : </span>{cockdetail.strCategory}</p>
+					<p><span>Glass : </span>{cockdetail.strGlass}</p>
+					<p><span>Instructions : </span>{cockdetail.strInstructions}</p>
 				</div>
 
 				<h3>Ingredients</h3>
@@ -58,7 +58,7 @@ function CockDetail() {
 								<li key={i} className='ingred_item'>
 									<Link to={`/ingredient/${ingredient}`}>
 									<img src={`http://www.thecocktaildb.com/images/ingredients/${ingredient}-Small.png`} />
-									<p>{measure} {ingredient}</p>
+									<p>{measure} <span>{ingredient}</span></p>
 									</Link>
 								</li>
 							);

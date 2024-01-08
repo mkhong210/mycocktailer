@@ -66,6 +66,9 @@
 		font-size: 1.6rem;
 		margin-bottom: 2rem;
 		line-height: 1.4;
+		span{
+			font-weight: bold;
+		}
 	}
 	h3{
 		font-size: 2rem;
@@ -78,8 +81,9 @@
 		padding: 10px;
 		border-radius: 16px;
 		gap: 10px;
+		// justify-content: center;
 		.ingred_item{
-			width: 50%;
+			width: calc(50% - 10px);
 			a {
 				width: 100%;
 				display: flex;

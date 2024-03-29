@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/mycocktailer/static/css/main.409c4dd4.css",
-    "main.js": "/mycocktailer/static/js/main.b1562e35.js",
+    "main.css": "/mycocktailer/static/css/main.25271b93.css",
+    "main.js": "/mycocktailer/static/js/main.0c5cdb20.js",
     "static/js/787.c68b944a.chunk.js": "/mycocktailer/static/js/787.c68b944a.chunk.js",
     "static/media/MAIN_visual_bg.jpg": "/mycocktailer/static/media/MAIN_visual_bg.392cedf08c4b0eeec228.jpg",
     "service-worker.js": "/mycocktailer/service-worker.js",
-    "static/media/Spin-1s-200px.svg": "/mycocktailer/static/media/Spin-1s-200px.9344e47a20844e17368c.svg",
+    "static/media/Spin-1s-200px.svg": "/mycocktailer/static/media/Spin-1s-200px.22395a9e793e10ff190b.svg",
     "index.html": "/mycocktailer/index.html",
-    "static/media/icon_arrow_left_333.svg": "/mycocktailer/static/media/icon_arrow_left_333.c7633886e8f9b76db0c8d230e915d9d2.svg",
-    "main.409c4dd4.css.map": "/mycocktailer/static/css/main.409c4dd4.css.map",
-    "main.b1562e35.js.map": "/mycocktailer/static/js/main.b1562e35.js.map",
+    "static/media/icon_arrow_left_333.svg": "/mycocktailer/static/media/icon_arrow_left_333.ec91d2c6880dd4565f1988da3e5cb823.svg",
+    "main.25271b93.css.map": "/mycocktailer/static/css/main.25271b93.css.map",
+    "main.0c5cdb20.js.map": "/mycocktailer/static/js/main.0c5cdb20.js.map",
     "787.c68b944a.chunk.js.map": "/mycocktailer/static/js/787.c68b944a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.409c4dd4.css",
-    "static/js/main.b1562e35.js"
+    "static/css/main.25271b93.css",
+    "static/js/main.0c5cdb20.js"
   ]
 }

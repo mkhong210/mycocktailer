@@ -31,7 +31,7 @@ function CockDetail() {
 	useEffect(() => {
 		setCockdetail(...data); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
 	}, [data]);
-	console.log(cockdetail)
+	// console.log(cockdetail, data)
 
 	return (
 		<>

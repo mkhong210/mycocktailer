@@ -5,14 +5,13 @@ import { myContext } from '../../Context';
 
 function CockDetail() {
 	const {  id } = useParams();
-	console.log( id);
 	const { data, fetchFn } = useContext(myContext);
-	const [cockdetail, setCockdetail] = useState([]);
+	const [cockdetail, setCockdetail] = useState(null);
 
-	const fetchData = async () => {
-		await fetchFn('cock_detail', id);
-		// setCockdetail(...data);
-	};
+	// const fetchData = async () => {
+	// 	await fetchFn('cock_detail', id);
+	// 	// setCockdetail(...data);
+	// };
 	// useEffect(() => {
 	// 	const fetchData = async () => {
 	// 		await fetchFn('cock_detail', id)
@@ -25,17 +24,32 @@ function CockDetail() {
 	// 	fetchData(); // fetchData 함수를 호출합니다.
 	// }, [fetchFn]);
 
-	useEffect(() => {
-		fetchData(); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
-	}, []);
-	useEffect(() => {
-		setCockdetail(...data); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
-	}, [data]);
+	// useEffect(() => {
+	// 	fetchData(); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
+	// }, []);
+	// useEffect(() => {
+	// 	setCockdetail(...data); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
+	// }, [data]);
 	// console.log(cockdetail, data)
+
+	useEffect(() => {
+		const fetchData = async () => {
+				await fetchFn('cock_detail', id);
+		};
+		fetchData();
+	}, [id, fetchFn]); // id나 fetchFn이 변경될 때마다 데이터를 새로 불러옴
+
+	useEffect(() => {
+		if (data && data.length > 0) {
+				// data가 존재하고 비어있지 않은 경우에만 데이터를 설정
+				setCockdetail(data[0]);
+		}
+	}, [data]);
 
 	return (
 		<>
 			<Back />
+			{cockdetail && (
 			<section className='cocktail_detail inner'>
 				<h2>Cocktail Detail</h2>
 				<div className='img_wrap'>
@@ -73,6 +87,7 @@ function CockDetail() {
 					</p>
 				)}
 			</section>
+			)}
 		</>
 	)
 }

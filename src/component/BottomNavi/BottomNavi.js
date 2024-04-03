@@ -29,12 +29,12 @@ function BottomNavi() {
 						<p>칵테일</p>
 					</Link>
 				</div>
-				<div className='navi_item'>
+				{/* <div className='navi_item'>
 					<Link to='/community'>
 						<img src={community} />
 						<p>커뮤니티</p>
 					</Link>
-				</div>
+				</div> */}
 				{/* <div className='navi_item'>
 					<Link to='/mypage'>
 						<img src={user} />

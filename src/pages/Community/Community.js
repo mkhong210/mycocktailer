@@ -34,7 +34,7 @@ function Community() {
 	}
 	useEffect(() => {
 		// useEffect 안에 없으면 파일이 실행됐을 때 아래서 또 실행하고 무한렌더링가능 
-		getData();
+		// getData();
 	}, [data])
 
 	return (

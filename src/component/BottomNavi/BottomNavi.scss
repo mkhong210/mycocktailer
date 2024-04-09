@@ -21,7 +21,8 @@ footer {
 }
 .footer_wrap {
 	.navi_item {
-		width: calc((100% - 80px) / 4);
+		// width: calc((100% - 80px) / 4);
+		width: calc((100% - 80px) / 3);
 		a {
 			// width: auto;
 			display: flex;

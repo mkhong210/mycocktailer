@@ -25,10 +25,10 @@ function CockDetail() {
 	// }, [fetchFn]);
 
 	// useEffect(() => {
-	// 	fetchData(); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
+	// 	fetchData();
 	// }, []);
 	// useEffect(() => {
-	// 	setCockdetail(...data); // data가 업데이트될 때마다 ingredients를 업데이트합니다.
+	// 	setCockdetail(...data);
 	// }, [data]);
 	// console.log(cockdetail, data)
 
@@ -37,7 +37,7 @@ function CockDetail() {
 				await fetchFn('cock_detail', id);
 		};
 		fetchData();
-	}, [id, fetchFn]); // id나 fetchFn이 변경될 때마다 데이터를 새로 불러옴
+	}, [id, fetchFn]);
 
 	useEffect(() => {
 		if (data && data.length > 0) {

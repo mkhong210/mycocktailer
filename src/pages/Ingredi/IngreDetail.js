@@ -35,8 +35,6 @@ function IngreDetail() {
 	// 	fetchFn('filter', ingredient);
 	// 	setCocktails(data);
 	// }, []);
-	// console.log(data)
-	// // console.log(ingredient)
 
 	// 방법 1 - success 
 	// useEffect(() => {
@@ -136,7 +134,7 @@ function IngreDetail() {
 				<h1>{sec1.strIngredient}</h1>
 				{/* fonts	14px */}
 				<p className='desc'>{sec1.strDescription}</p>
-				<ul className='cock_InIngredi'>
+				<div className='cock_InIngredi'>
 					<Swiper
 						slidesPerView={2.4}
 						spaceBetween={20}
@@ -161,7 +159,7 @@ function IngreDetail() {
 							</SwiperSlide>
 						))}
 					</Swiper>
-				</ul>
+				</div>
 			</section>
 		</>
 	);

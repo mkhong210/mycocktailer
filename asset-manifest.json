@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mycocktailer/static/css/main.683bc873.css",
-    "main.js": "/mycocktailer/static/js/main.73a1201f.js",
+    "main.js": "/mycocktailer/static/js/main.c54b0d74.js",
     "static/js/787.c68b944a.chunk.js": "/mycocktailer/static/js/787.c68b944a.chunk.js",
     "static/media/MAIN_visual_bg.jpg": "/mycocktailer/static/media/MAIN_visual_bg.392cedf08c4b0eeec228.jpg",
     "service-worker.js": "/mycocktailer/service-worker.js",
@@ -9,11 +9,11 @@
     "index.html": "/mycocktailer/index.html",
     "static/media/icon_arrow_left_333.svg": "/mycocktailer/static/media/icon_arrow_left_333.ec91d2c6880dd4565f1988da3e5cb823.svg",
     "main.683bc873.css.map": "/mycocktailer/static/css/main.683bc873.css.map",
-    "main.73a1201f.js.map": "/mycocktailer/static/js/main.73a1201f.js.map",
+    "main.c54b0d74.js.map": "/mycocktailer/static/js/main.c54b0d74.js.map",
     "787.c68b944a.chunk.js.map": "/mycocktailer/static/js/787.c68b944a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.683bc873.css",
-    "static/js/main.73a1201f.js"
+    "static/js/main.c54b0d74.js"
   ]
 }
